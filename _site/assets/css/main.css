@@ -2743,13 +2743,7 @@ input, select, textarea {
 			box-shadow: inset 0 1px 0 0 #000000;
 		}
 
-			.main .container:before {
-				min-height: calc( 100vh - 13em);
-				content: '';
-				display: inline-block;
-				vertical-align: middle;
-				width: 1px;
-			}
+			
 
 			.main .container .content {
 				display: inline-block;
