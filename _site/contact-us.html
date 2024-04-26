@@ -2,7 +2,49 @@
 <html class="wide wow-animation" lang="en">
 
   <head>
-   <!-- Google tag (gtag.js) -->
+  
+  <!-- For Form -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#submit").click(function(e) {
+                e.preventDefault();
+
+                var name = $("#name").val(),
+                    email = $("#email").val(),
+                    phone = $("#phone").val(),
+                    wsource = $("#wsource").val(),
+                    desc = $("#desc").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: 'https://6632bs8ve0.execute-api.us-east-1.amazonaws.com/TestAPI/contact-us',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        'name': name,
+                        'phone':phone,
+                        'email': email,
+                        'desc': desc,
+                        'wsource': "www.BelavieVoyager.com Contact_EmailCapture"
+                    }),
+                    success: function(res){
+                        $('#form-response').text('Thank You -  Message Sent. We will be in touch shortly');
+                        
+					
+                    },
+                    error: function(){
+                        $('#form-response').text('Error.');
+                    }
+                });
+
+            })
+
+        });
+    </script>
+    
+    
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RM61HD7MZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -11,7 +53,7 @@
 
   gtag('config', 'G-L9RVED7CXD');
 </script>
-    <title>Events - BelavieVoyager</title>
+    <title>BelavieVoyager Home </title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +67,7 @@
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
-  <body>
+ <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
       <div class="preloader-body">
@@ -36,7 +78,7 @@
       </div>
     </div>
     <div class="page">
-     <!-- Page Header-->
+      <!-- Page Header-->
       <header class="section page-header">
         <!-- RD Navbar-->
         <div class="rd-navbar-wrap">
@@ -95,175 +137,89 @@
       <section class="breadcrumbs-custom-inset">
         <div class="breadcrumbs-custom context-dark bg-overlay-60">
           <div class="container">
-            <h2 style="color:#FFFFFF; "class="breadcrumbs-custom-title">Events</h2>
+            <h2 style="color:#FFFFFF;" class="breadcrumbs-custom-title">Contact Us</h2>
             <ul class="breadcrumbs-custom-path">
-              <li style="color:#FFFFFF;><a href="index.html">Home</a></li>
-              <li style="color:#FFFFFF;class="active">Events</li>
+              <li><a style="color:#FFFFFF;" href="index.html">Home</a></li>
+              <li style="color:#FFFFFF;" class="active">Contact Us</li>
             </ul>
           </div>
           <div class="box-position" style="background-image: url(images/breadcrumbs-bg.jpg);"></div>
         </div>
       </section>
-      <!-- Events -->
-       <div class="container">
-       <h2 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> Crafting Unforgettable Events</h2>
-        <h3 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> From Streamlined Planning to Lasting Impact: The Complete Conference Package</h3>
-       </div>
-            <!-- Destinations-->
-      <section  id="borabora" class="section section-sm section-first bg-default text-md-left">
+      <!-- Contact information-->
+      <section class="section section-sm section-first bg-default">
         <div class="container">
-          <div class="row row-50 justify-content-center align-items-xl-center">
-            <div  class="col-md-10 col-lg-5 col-xl-6"><img src="images/gallery-image-12-420x308-01c.jpg" alt="" width="420" height="308"/>
-            </div>
-          
-                           <div  class="col-md-10 col-lg-5 col-xl-6"><img src="images/gallery-image-12-420x308-01d.jpg" alt="" width="420" height="308"/>
-                  </div>
-            </div>
-          </div>
-           <div class="container">
-       <h3 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> Pre-Conference Preparation</h3>
-						<p style="color:#84635D;" class="icon solid  fa-map"> Planning and Logistics: Define the conference objectives, themes, and agenda. Choose a venue – negotiate a favorable contract ensuring best pricing and perks, choose the AV company that best suits your needs and budget – whether in-house or outsourced, set dates, and determine the budget. Arrange for accommodations, catering, entertainment and technical requirements.</p>
-
-<br><p style="color:#84635D;" class="icon solid  fa-users">
-Speakers and Content : Coordinate speaker schedules and communications. Collect presentation materials in advance.</p>
-
-<br><p style="color:#84635D;" class="icon solid  fa-plane">
-Registration and sales: Set up an online registration system and manage ticket sales. Set up promo codes, e.g. speakers, sponsors, Board of Directors, if needed. </p>
-
-<br><p style="color:#84635D;" class="icon solid fa-tag">
-Networking Opportunities: Plan networking sessions, receptions, exhibitor booths, and social events to encourage interaction among attendees, sponsors, and speakers.</p>
-<br>
-<h3 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> On-site Management</h3>
-						<p style="color:#84635D;" class="icon solid  fa-map"> Oversee the setup of the venue, registration desks, signage, decor, and technical equipment. Ensure everything runs smoothly and troubleshoot any issues that arise.</p>
-
-
-<br><p style="color:#84635D;" class="icon solid  fa-users">
-Backend Coordination -  Oversee check-ins, catering, audio visual, and rooms.</p>
-
-<br><p style="color:#84635D;" class="icon solid  fa-plane">
-Attendee Experience -  Provide support to attendees, answer questions, and address concerns. Collect feedback through surveys or comment cards. </p>
-
-<br><p style="color:#84635D;" class="icon solid fa-tag">
-Vendor and Sponsor Management -  Coordinate with sponsors and exhibitors, ensuring they have what they need and that their contributions align with the conference's goals.</p>
-<br>
-<h3 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> Post-Conference</h3>
-						<p style="color:#84635D;" class="icon solid  fa-map"> Follow-Up : Send thank-you notes to speakers, sponsors, and attendees. Share presentations or resources from the conference. Gather and analyze feedback to improve future events.</p>
-
-<br><p style="color:#84635D;" class="icon solid  fa-users">
-Financial Review: Reconcile expenses, review budget adherence, and generate financial reports to assess the conference's success and areas for improvement.</p>
-
-<br><p style="color:#84635D;" class="icon solid  fa-plane">
-Documentation and Evaluation: Document key insights, successes, challenges, and lessons learned. Conduct a comprehensive evaluation to gauge attendee satisfaction and identify areas for enhancement.</p>
-<br><p style="color:#84635D;" class="icon solid fa-tag">
-Vendor and Sponsor Management -  Coordinate with sponsors and exhibitors, ensuring they have what they need and that their contributions align with the conference's goals.</p>
-<br>
-       </div>
-      </section>
-      <h3 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;">Curated Family Retreats for High-Net-Worth Families</h3>
-            <section  id="borabora" class="section section-sm section-first bg-default text-md-left">
-        <div class="container">
-          <div class="row row-50 justify-content-center align-items-xl-center">
-            <div  class="col-md-10 col-lg-5 col-xl-6"><img src="images/gallery-image-12-420x308-01a.jpg" alt="" width="420" height="308"/>
-            </div>
-          
-                           <div  class="col-md-10 col-lg-5 col-xl-6"><img src="images/gallery-image-12-420x308-01b.jpg" alt="" width="420" height="308"/>
-                  </div>
-            </div>
-          </div>
-           <div class="container">
-       
-		<h4 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> Where Legacy Meets Adventure: Create Lasting Memories and Strengthen Family Bonds.</h4>
-			<br><p style="color:#84635D;" class="icon solid  fa-users">
-We offer full retreat planning with unparalleled service, insider knowledge and exclusive perks for families that see the value in spending quality time together. Growing and learning as a family is essential to the success of a family-run business. We offer in-house Travel Advisor services to, from and within the chosen destination. Don’t forget the kids! We create children’s activities to keep the little ones interested and excited to meet other little ones. Enjoy bespoke experiences for the whole family along with tailored experiences for individuals who wish to incorporate me-time in addition to family-time. We provide business meeting coordination and educational programs to balance business and play.</p>
-					<br><a style="color:#84635D;"  href="https://BELAVIEVOYAGER.COM/belavievoyagerflyer.pdf" target="_blank">Download our HNW PDF Flyer</a><br>
-					</div>
-					
-				</div>
-       </div>
-       </div>
-      </section>
-     
-
-    <!--	Instagrram wondertour-->
-      <section id="clients" class="section section-sm section-top-0 section-fluid section-relative bg-gray-4">
-        <div class="container-fluid">
-         <center> <h6 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"class="gallery-title">Clients & Events Gallery</h6></center>
-          <!-- Owl Carousel-->
-          <div class="owl-carousel owl-classic owl-dots-secondary" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-xl-items="5" data-xxl-items="6" data-stage-padding="15" data-xxl-stage-padding="0" data-margin="30" data-autoplay="true" data-nav="true" data-dots="true">
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-8-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-             
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-2-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-              
-            </article>
-            
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-4-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-              
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-5-270x195.jpeg" alt="" width="270" height="195"/>
-              
-              
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-6-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-             
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-7-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
+          <div class="row row-30 justify-content-center">
+            <div class="col-sm-8 col-md-6 col-lg-4">
+              <article class="box-contacts">
+                <div class="box-contacts-body">
+                  <div class="box-contacts-icon fl-bigmug-line-cellphone55"></div>
+                  <div class="box-contacts-decor"></div>
+                  <p style="color:#84635D;" class="box-contacts-link"><a href="tel:tel:+17864826764">+1 786-482-6764</a></p>
+                  
+                </div>
               </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-9-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-              </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-10-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-              </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-11-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-            </article>
+            </div>
            
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-12-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
+            <div class="col-sm-8 col-md-6 col-lg-4">
+              <article class="box-contacts">
+                <div class="box-contacts-body">
+                  <div class="box-contacts-icon fl-bigmug-line-chat55"></div>
+                  <div class="box-contacts-decor"></div>
+                  <p style="color:#84635D;" class="box-contacts-link"><a href="mailto:info@BelavieVoyager.com">info@Belavievoyager.com</a></p>
+                  
+                </div>
               </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-13-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-            </article>
-                <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-14-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-            </article>
+            </div>
           </div>
         </div>
       </section>
+		
+      <!-- Contact Form-->
+      <section class="section section-sm section-last bg-default text-left">
+        <div class="container">
+          <article class="title-classic">
+            <div class="title-classic-title">
+              <h3 style="color:#84635D;" >Get in touch</h3>
+            </div>
+            <div class="title-classic-text">
+              <p style="color:#84635D;" >If you have any questions, just fill in the contact form, and we will answer you shortly.</p>
+            </div>
+          </article>
+          <form class="rd-form rd-form-variant-2 rd-mailform"  data-form-type="contact" method="GET" action="#" onsubmit="myButton.disabled = true; return true;">
+            <div class="row row-14 gutters-14">
+              <div class="col-md-4">
+                <div class="form-wrap">
+                  <input class="form-input" id="name" type="text" name="name" data-constraints="@Required">
+                  <label class="form-label" for="name">Your Name</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-wrap">
+                  <input class="form-input" id="email" type="email" name="email" data-constraints="@Email @Required">
+                  <label class="form-label" for="email">E-mail</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-wrap">
+                  <input class="form-input" id="phone" type="text" name="phone" data-constraints="@Numeric">
+                  <label class="form-label" for="phone">Phone</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-wrap">
+                  <label class="form-label" for="desc">Message</label>
+                  <textarea class="form-input textarea-lg" id="desc" name="desc" data-constraints="@Required"></textarea>
+                </div>
+              </div>
+            </div>
+            <button  button  id="submit" class="button button-primary button-pipaluk" type="submit"></i>Send Message</button>
+          </form>
+          <div id="form-response"></div>
+        </div>
+      </section>
 
-
-
-           <!-- Page Footer-->
+      <!-- Page Footer-->
       <footer class="section footer-corporate context-dark">
         <div class="footer-corporate-inset">
           <div class="container">
